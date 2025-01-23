@@ -24,7 +24,7 @@ export const validResults = (argsInFormat, operations) => { //{command count [pa
 };
 
 export const formatArguments = (args, operations) => {
-  if (!args[0].startsWith("-")) { // extract
+  if (!args[0].startsWith("-")) {
     return { command: "-n", count: 10, paths: args };
   }
 
@@ -47,7 +47,7 @@ export const formatArguments = (args, operations) => {
     throw `head: invalid option -- ${args[0]}`;
   }
 
-  if (!(argsInFormat.count > 0)) { //doesn't work for tail -ve
+  if (!(argsInFormat.count > 0)) {
     throw `illegal line count -- ${argsInFormat.count}`;
   }
 
